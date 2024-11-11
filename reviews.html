@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Відгуки - Ресторан "Смакота"</title>
+    <link rel="stylesheet" href="reviewsstyle.css">
+</head>
+<body>
+
+<header>
+    <h1>Ресторан "Смакота"</h1>
+    <nav>
+        <a href="restoran.html">Головна</a>
+        <a href="menu.html">Меню</a>
+        <a href="reviews.html">Відгуки</a>
+        <a href="contact.html">Контакти</a>
+    </nav>
+</header>
+
+<section>
+    <h2>Відгуки наших гостей</h2>
+    <div class="review">
+        <img src="images/oleksandr.jpg" alt="Олександр">
+        <div>
+            <h3>Олександр</h3>
+            <p>Чудова атмосфера та смачні страви. Дуже сподобалося!</p>
+        </div>
+    </div>
+    <div class="review">
+        <img src="images/maria.jpg" alt="Марія">
+        <div>
+            <h3>Марія</h3>
+            <p>Ресторан дуже затишний, а персонал привітний. Обов’язково повернуся!</p>
+        </div>
+    </div>
+    <div class="review">
+        <img src="images/петро.jpg" alt="Петро">
+        <div>
+            <h3>Петро</h3>
+            <p>Відмінний сервіс і вишукані страви! Рекомендую!</p>
+        </div>
+    </div>
+    <div class="review">
+        <img src="images/Ірина.jpg" alt="Ірина">
+        <div>
+            <h3>Ірина</h3>
+            <p>Неперевершене місце для вечері з родиною. Дякуємо!</p>
+        </div>
+    </div>
+    <div class="review">
+        <img src="images/сергій.jpg" alt="Сергій">
+        <div>
+            <h3>Сергій</h3>
+            <p>Смачні десерти, особливо торт! Обов'язково спробуйте!</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Залиште свій відгук</h2>
+    <div class="feedback-form">
+        <form>
+            <input type="text" name="name" placeholder="Ваше ім'я" 
+            pattern="[A-Za-zА-Яа-яІіЇїЄєҐґ\s\-']{2,}" 
+            title="Ім'я повинно містити щонайменше 2 літери та не містити цифр!" required>
+            <textarea rows="4" placeholder="Ваш відгук" required></textarea>
+            <button type="submit">Надіслати</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Ресторан "Смакота". Всі права захищені.<br>Розробив Русак - Козак</p>
+</footer>
+
+</body>
+</html>

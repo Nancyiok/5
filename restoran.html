@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ресторан "Смакота"</title>
+    <link rel="stylesheet" href="restoranstyle.css"> <!-- Зовнішній CSS файл -->
+       
+</head>
+<body>
+
+<header>
+    <h1>Ресторан "Смакота"</h1>
+    <nav>
+        <a href="restoran.html">Головна</a>
+        <a href="menu.html">Меню</a>
+        <a href="reviews.html">Відгуки</a>
+        <a href="contact.html">Контакти</a>
+    </nav>
+</header>
+
+<div class="main-header">
+    <h2>Ласкаво просимо до ресторану "Смакота"!</h2>
+    <p><i>Найкращі страви за ваш смак!</i></p>
+</div>
+
+<section id="about">
+    <h2>Про нас</h2>
+    <p>Наш ресторан пропонує вишукані страви <u>української кухні</u>,<br> приготовані з любов’ю до традицій. Відвідайте нас і насолоджуйтеся атмосферою затишку та смаку!</p>
+</section>
+
+<section id="why-us">
+    <h3>Чому ми найкращі</h3>
+    <ul>
+        <li>Традиційні рецепти, приготовані з якісних інгредієнтів.</li>
+        <li>Затишна атмосфера і уважний сервіс.</li>
+        <li>Великий вибір страв на будь-який смак.</li>
+        <li>Доступні ціни та регулярні акції.</li>
+        <li>Позитивні відгуки від наших постійних клієнтів.</li>
+    </ul>
+</section>
+
+<section id="ratings">
+    <h3>Оцінка від відомих українських експертів</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Експерт</th>
+                <th>Оцінка</th>
+                <th>Коментар</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Олександр П.</td>
+                <td>5/5</td>
+                <td>Відмінний ресторан з чудовою атмосферою та смачними стравами. Рекомендую всім!</td>
+            </tr>
+            <tr>
+                <td>Марія К.</td>
+                <td>4.5/5</td>
+                <td>Смачно, але трохи довго чекали замовлення. Проте це варто того.</td>
+            </tr>
+            <tr>
+                <td>Іван Г.</td>
+                <td>4/5</td>
+                <td>Добре, але є можливість для покращення обслуговування. Все інше на висоті.</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+<section id="book-table">
+    <h2>Замовити столик</h2>
+    <p>Заповніть форму нижче, щоб забронювати столик у нашому ресторані.</p>
+    <form action="s" method="POST">
+        <label for="name">Ваше ім'я:</label><br>
+        <input type="text" id="name" name="name" required placeholder="Введіть ваше ім'я" pattern="[A-Za-zА-Яа-яІіЄє' -]+" title="Тільки літери, пробіли та апострофи"><br>
+        
+        <label for="phone">Телефон:</label><br>
+        <input type="tel" id="phone" name="phone" required placeholder="Введіть номер телефону" pattern="\+?[0-9]{10,15}" title="Формат: +380XXXXXXXXX або 0XXXXXXXXX"><br>
+        
+        <label for="date">Дата:</label><br>
+        <input type="date" id="date" name="date" required><br>
+        
+        <label for="time">Час:</label><br>
+        <input type="time" id="time" name="time" required><br>
+        
+        <label for="guests">Кількість гостей:</label><br>
+        <input type="number" id="guests" name="guests" min="1" required placeholder="Введіть кількість гостей" pattern="[0-9]+" title="Введіть число більше 0"><br>
+        
+        <button type="submit">Забронювати</button>
+    </form>
+</section>
+<section id="special-animation">
+    <h2>Секретний рецепт дня</h2>
+    <div class="recipe-box">
+        <img src="images/борщілюстрація.jpg" alt="Секретний рецепт" class="recipe-image">
+        <p class="recipe-text">Спробуйте наш унікальний борщ з таємним інгредієнтом!</p>
+    </div>
+</section>
+
+
+
+
+<footer>
+    <p>&copy; 2024 Ресторан "Смакота". Всі права захищені.<br>Розробив Русак - Козак</p>
+</footer>
+
+</body>
+</html>

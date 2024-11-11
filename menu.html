@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню - Ресторан "Смакота"</title>
+    <link rel="stylesheet" href="menustyles.css"> <!-- Зовнішній CSS файл -->
+</head>
+<body>
+
+<header>
+    <h1>Ресторан "Смакота"</h1>
+    <nav>
+        <a href="restoran.html">Головна</a>
+        <a href="menu.html">Меню</a>
+        <a href="reviews.html">Відгуки</a>
+        <a href="contact.html">Контакти</a>
+    </nav>
+</header>
+
+<section>
+    <h2>Наше меню</h2>
+    <table>
+        <tr>
+            <td><img src="images/борщ.jpg" alt="Борщ"></td>
+            <td>Борщ</td>
+            <td>Традиційний український борщ з пампушками.</td>
+            <td>80 грн</td>
+            <td class="b"><button class="order-button" onclick="openModal('Борщ', '80 грн')">Замовити</button></td>
+        </tr>
+        <tr>
+            <td><img src="images/вареники.jpg" alt="Вареники"></td>
+            <td>Вареники</td>
+            <td>Вареники з картоплею та грибами.</td>
+            <td>70 грн</td>
+            <td  class="b"><button class="order-button" onclick="openModal('Вареники', '70 грн')">Замовити</button></td>
+        </tr>
+        <tr>
+            <td><img src="images/торт.jpg" alt="Київський торт"></td>
+            <td>Київський торт</td>
+            <td>Солодкий десерт з горіхами та безе.</td>
+            <td>90 грн</td>
+            <td  class="b"><button class="order-button" onclick="openModal('Київський торт', '90 грн')">Замовити</button></td>
+        </tr>
+        <tr>
+            <td><img src="images/деруни.jpg" alt="Деруни"></td>
+            <td>Деруни</td>
+            <td>Деруни зі сметаною та грибним соусом.</td>
+            <td>65 грн</td>
+            <td  class="b"><button class="order-button" onclick="openModal('Деруни', '65 грн')">Замовити</button></td>
+        </tr>
+        <tr>
+            <td><img src="images/салат.jpg" alt="Олів'є"></td>
+            <td>Салат Олів'є</td>
+            <td>Традиційний новорічний салат з овочами та майонезом.</td>
+            <td>55 грн</td>
+            <td  class="b"><button class="order-button" onclick="openModal('Салат Олів\'є', '55 грн')">Замовити</button></td>
+        </tr>
+        <tr>
+            <td><img src="images/сирники.jpg" alt="Сирник з ягодами"></td>
+            <td>Сирник з ягодами</td>
+            <td>Ніжний сирник з додаванням свіжих сезонних ягід.</td>
+            <td>85 грн</td>
+            <td  class="b"><button class="order-button" onclick="openModal('Сирник з ягодами', '85 грн')">Замовити</button></td>
+        </tr>
+    </table>
+</section>
+<section class="special-offers">
+    <h2>Унікальні пропозиції</h2>
+    <div class="offers-container">
+        <div class="offer-card">
+            <img src="images/борщ3.jpg" alt="Знижка на борщ">
+            <h3>Знижка 20% на борщ</h3>
+            <p>Замовте традиційний український борщ та отримайте знижку 20% на другу порцію!</p>
+            <a href="#orderModal" onclick="openModal('Борщ', '64 грн')">Замовити зараз</a>
+        </div>
+        <div class="offer-card">
+            <img src="images/вареники2.jpg" alt="Безкоштовні вареники">
+            <h3>Безкоштовні вареники</h3>
+            <p>При замовленні страв на суму від 200 грн — отримайте порцію вареників безкоштовно!</p>
+            <a href="#orderModal" onclick="openModal('Вареники', '48 грн')">Отримати вареники</a>
+        </div>
+        <div class="offer-card">
+            <img src="images/торткиїв.jpg" alt="Бонус Київський торт">
+            <h3>Бонус: Київський торт</h3>
+            <p>Отримайте шматок Київського торта в подарунок при замовленні будь-якого десерту.</p>
+            <a href="#orderModal" onclick="openModal('Сирник з ягодами', '85 грн')">Отримати тортик</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2024 Ресторан "Смакота". Всі права захищені.</p>
+</footer>
+
+<!-- Модальне вікно -->
+<div id="orderModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 style="text-align: center;">Замовлення</h2>
+        <div class="modal-body">
+            <p style="text-align: center;"id="dishName"></p>
+            <p style="text-align: center;" id="dishPrice"></p>
+            <form id="orderForm">
+                <input type="text" name="name" placeholder="Ваше ім'я" 
+                       pattern="[A-Za-zА-Яа-яІіЇїЄєҐґ\s\-']{2,}" 
+                       title="Ім'я повинно містити щонайменше 2 літери та не містити цифр!" required>
+                <input type="number" name="quantity" placeholder="Кількість" start="1">
+                <input type="tel" name="phone" placeholder="Ваш номер телефону" 
+                       pattern="\+380\d{9}" 
+                       title="Номер телефону має бути в форматі +380XXXXXXXXX" required>
+                
+                <input type="text" name="address" placeholder="Адреса доставки" 
+                       pattern=".{5,}" 
+                       title="Адреса повинна містити щонайменше 5 символів" required>
+                
+                <textarea name="comment" placeholder="Коментар до замовлення" rows="4"></textarea>
+                <input type="submit" value="Підтвердити замовлення">
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function openModal(dishName, dishPrice) {
+        document.getElementById('dishName').innerText = 'Страва: ' + dishName;
+        document.getElementById('dishPrice').innerText = 'Ціна: ' + dishPrice;
+        document.getElementById('orderModal').style.display = 'block';
+    }
+
+    function closeModal() {
+        document.getElementById('orderModal').style.display = 'none';
+    }
+
+    // Закриття модального вікна при кліку поза ним
+    window.onclick = function(event) {
+        const modal = document.getElementById('orderModal');
+        if (event.target == modal) {
+            closeModal();
+        }
+    };
+
+    // Додавання обробника події на форму
+    document.getElementById('orderForm').onsubmit = function(event) {
+        event.preventDefault();
+        alert('Ваше замовлення підтверджено!\nІм\'я: ' + this.name.value + '\nТелефон: ' + this.phone.value + '\nАдреса: ' + this.address.value + '\nКоментар: ' + this.comment.value);
+        closeModal();
+    };
+</script>
+
+</body>
+</html>
