@@ -36,7 +36,7 @@ nav a:hover {
 }
 
 .main-header {
-    background: url('images/ресторан.jpg') no-repeat center center/cover;
+    background: url('ресторан.jpg') no-repeat center center/cover;
     padding: 120px 0; 
     color: white;
     text-align: center;
